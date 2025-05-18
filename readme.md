@@ -5,7 +5,7 @@ This script gets data from the Comelec website and saves precinct-level election
 
 
 ## Approach -
-The crawler steps through the site’s data in a clear order: it first fetches all regions, then for each region fetches its provinces, then cities, then barangays, and finally precinct IDs. For each precinct it downloads the detailed vote counts and writes them to a CSV in the matching folder path. A small checkpoint file records the last precinct processed so you can stop and restart without losing progress.
+The crawler steps through the site’s data: it first fetches all regions, then for each region fetches its provinces, then cities, then barangays, and finally precinct IDs. For each precinct it downloads the detailed vote counts and writes them to a CSV in the matching folder path. A small checkpoint file records the last precinct processed so you can stop and restart without losing progress.
 
 ## How the API Works -
 1. Request `…/regions/local/0.json` to get all region codes.  
